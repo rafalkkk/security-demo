@@ -31,6 +31,7 @@ Add new workflow using wizard: Bandit >> Actions >> commit >> Security >> Code s
 3 - CodeQL (GitHub Advanced Security)
 =====================================
 Add new workflow using wizard: CodeQL >> Actions >> commit >> Security >> Code scanning
+https://docs.github.com/en/get-started/learning-about-github/about-github-advanced-security
 
 4 - Flake8 - linting
 ====================
@@ -41,7 +42,9 @@ Observe results
 5 - Pylint - linting
 ====================
 Add new workflow using wizard: commit >> analyze errors
+https://pylint.readthedocs.io/en/stable/user_guide/messages/messages_overview.html
 
 6 - SQLFLUFF - SQL linting
 ==========================
 Linting for SQL - no results
+https://sqlfluff.com/
