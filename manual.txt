@@ -8,13 +8,13 @@ python -m venv venv
 pip install -r ./requirements.txt
 python setup.py
 
-SQL Injection demo
-==================
+0 - SQL Injection demo
+======================
 python sql-injection-check-password.py
 enter user:  ' OR 1=1 OR ''='
 
-Bandit - locally
-================
+1 - Bandit - locally and/or GitHub
+==================================
 pip install bandit
 bandit ./sql-injection-check-password.py
   # B608:hardcoded_sql_expressions
@@ -23,18 +23,25 @@ bandit ./app.py
   # B110:try_except_pass
   # B201:flask_debug_true
 
-Bandit - GitHub Actions
-=======================
+2 - Bandit - GitHub Actions
+===========================
 Add file .github/workflows/01-bandit.yaml and commit, analyze the result
 Add new workflow using wizard: Bandit >> Actions >> commit >> Security >> Code scanning
 
-CodeQL (GitHub Advanced Security)
-=================================
+3 - CodeQL (GitHub Advanced Security)
+=====================================
 Add new workflow using wizard: CodeQL >> Actions >> commit >> Security >> Code scanning
 
-Flake8 - linting
-================
+4 - Flake8 - linting
+====================
 Add file 04-flake8.yaml
 Commit
 Observe results
 
+5 - Pylint - linting
+====================
+Add new workflow using wizard: commit >> analyze errors
+
+6 - SQLFLUFF - SQL linting
+==========================
+Linting for SQL - no results
