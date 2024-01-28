@@ -1,0 +1,25 @@
+S E T U P
+=========
+cd mydir
+git clone https://github.com/rafalkkk/security-demo.git
+python -m pip install --upgrade
+python -m venv venv
+./venv/scripts/activate.ps1
+pip install -r ./requirements.txt
+python setup.py
+
+SQL Injection demo
+==================
+python sql-injection-check-password.py
+enter user:  ' OR 1=1 OR ''='
+
+B a n d i t
+===========
+pip install bandit
+bandit ./sql-injection-check-password.py
+  # B608:hardcoded_sql_expressions
+bandit ./app.py
+  # B105:hardcoded_password_string
+  # B110:try_except_pass
+  # B201:flask_debug_true
+  

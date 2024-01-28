@@ -30,7 +30,7 @@ def login():
             user = request.form['nm']
             # PASSWORD HARDCODED - B105
             password = "CoffeeWithLemon!"
-            return redirect(url_for('success', name=user, pass=password))
+            return redirect(url_for('success', name=user))
         user = request.args.get('nm')
         return redirect(url_for('success', name=user))
     except:
