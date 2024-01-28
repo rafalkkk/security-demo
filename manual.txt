@@ -13,8 +13,8 @@ SQL Injection demo
 python sql-injection-check-password.py
 enter user:  ' OR 1=1 OR ''='
 
-B a n d i t
-===========
+Bandit - locally
+================
 pip install bandit
 bandit ./sql-injection-check-password.py
   # B608:hardcoded_sql_expressions
@@ -22,4 +22,19 @@ bandit ./app.py
   # B105:hardcoded_password_string
   # B110:try_except_pass
   # B201:flask_debug_true
-  
+
+Bandit - GitHub Actions
+=======================
+Add file .github/workflows/01-bandit.yaml and commit, analyze the result
+Add new workflow using wizard: Bandit >> Actions >> commit >> Security >> Code scanning
+
+CodeQL (GitHub Advanced Security)
+=================================
+Add new workflow using wizard: CodeQL >> Actions >> commit >> Security >> Code scanning
+
+Flake8 - linting
+================
+Add file 04-flake8.yaml
+Commit
+Observe results
+
