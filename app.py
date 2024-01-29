@@ -1,4 +1,4 @@
-# Errors detected by bandit - docs:
+# Errors detected by bandit - docs: -
 # https://bandit.readthedocs.io/en/latest/plugins/index.html#complete-test-plugin-listing
 
 from flask import Flask, url_for, request, redirect
